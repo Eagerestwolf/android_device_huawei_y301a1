@@ -88,7 +88,7 @@ BOARD_KERNEL_BASE := 0x00200000
 BOARD_KERNEL_CMDLINE := androidboot.hardware=huawei androidboot.selinux=permissive
 BOARD_PAGE_SIZE := 2048
 TARGET_KERNEL_SOURCE := kernel/huawei/y301a1
-TARGET_KERNEL_CONFIG := hw_msm7x27a_defconfig
+TARGET_KERNEL_CONFIG := cm_y301a1_defconfig
 TARGET_PREBUILT_KERNEL := device/huawei/y301a1/kernel
 
 # Lights
@@ -102,11 +102,14 @@ TARGET_QCOM_MEDIA_VARIANT := legacy
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x800000
 BOARD_CACHEIMAGE_PARTITION_SIZE := 0xBD20000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x1400000
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 268435456
+#BOARD_USERDATAIMAGE_PARTITION_SIZE := 268435456
 
 BOARD_FLASH_BLOCK_SIZE := 131072
-TARGET_USERIMAGES_USE_EXT4 := true
 
 # Recovery
+TARGET_RECOVERY_FSTAB := device/huawei/valiant/rootdir/etc/fstab.valiant
+RECOVERY_FSTAB_VERSION := 2
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/huawei/y301a1/recovery/recovery-keys.c
 BOARD_UMS_LUNFILE := /sys/class/android_usb/android0/f_mass_storage/lun%d/file
 TARGET_RECOVERY_INITRC := device/huawei/y301a1/recovery/init.rc
@@ -137,3 +140,12 @@ TARGET_CUSTOM_WIFI := ../../device/huawei/y301a1/libhardware_legacy/wifi/wifi.c
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 BOARD_HAS_NO_SELECT_BUTTON := true
+
+# Filesystems
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
+TARGET_USERIMAGES_USE_EXFAT := true
+
+# Other
+DEVICE_RESOLUTION := 480x800
+USE_SET_METADATA := false
