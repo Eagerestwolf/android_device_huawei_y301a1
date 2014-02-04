@@ -108,7 +108,11 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 268435456
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Recovery
+<<<<<<< HEAD
 TARGET_RECOVERY_FSTAB := device/huawei/valiant/rootdir/etc/fstab.y301a1
+=======
+TARGET_RECOVERY_FSTAB := device/huawei/valiant/rootdir/fstab.y301a1
+>>>>>>> 280b8ebea06bd4a92218d92f679a5b5e108cbeae
 RECOVERY_FSTAB_VERSION := 2
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/huawei/y301a1/recovery/recovery-keys.c
 BOARD_UMS_LUNFILE := /sys/class/android_usb/android0/f_mass_storage/lun%d/file
