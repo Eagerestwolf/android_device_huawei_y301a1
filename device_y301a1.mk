@@ -13,7 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # The gps config appropriate for this device
@@ -156,7 +155,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 $(call inherit-product, vendor/huawei/y301a1/msm7x27a-common-vendor.mk)
 $(call inherit-product, vendor/huawei/y301a1/y301a1-vendor.mk)
 
-$(call inherit-product, device/huawei/y301a1/cm.mk)
+$(call inherit-product, build/target/product/full.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := cm_y301a1
