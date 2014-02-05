@@ -156,6 +156,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 $(call inherit-product, vendor/huawei/y301a1/msm7x27a-common-vendor.mk)
 $(call inherit-product, vendor/huawei/y301a1/y301a1-vendor.mk)
 
+$(call inherit-product, device/huawei/y301a1/cm.mk)
+
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := cm_y301a1
 PRODUCT_DEVICE := y301a1
